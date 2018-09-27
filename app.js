@@ -14,4 +14,4 @@ app.get('/redirect', function (req, res) {
         });
 });
 
-app.listen();
+app.listen(3000, () => console.log("resolver is running..."));
