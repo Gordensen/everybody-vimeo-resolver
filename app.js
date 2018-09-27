@@ -1,6 +1,7 @@
 var express = require('express');
 var fetch = require('node-fetch');
 var app = express();
+var port = process.env.PORT || 3000;
 
 app.get('/redirect', function (req, res) {
     let url = req.query.url;
@@ -14,4 +15,4 @@ app.get('/redirect', function (req, res) {
         });
 });
 
-app.listen(3000, () => console.log("resolver is running..."));
+app.listen(port, () => console.log("resolver is running..."));
